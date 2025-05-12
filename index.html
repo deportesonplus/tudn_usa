@@ -1563,10 +1563,43 @@ allowfullscreen src="https://streamtp4.com/global1.php?stream=tudn_usa" scrollin
 <p><strong style="color: rgb(255, 195, 0); font-size: 18px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Opciones:</strong></p>
 <br>
 <a class="boton" href="#opcion-1" id="document" onclick="document.getElementById('streamframe').src = '//streamtp4.com/global1.php?stream=tudn_usa'" style="text-align: left;"><button>OPC 1</button></a><span style="text-align: left;">&nbsp;</span>
-<a class="boton" href="#opcion-2" id="document" onclick="document.getElementById('streamframe').src = '//la12hd.com/vivo/canal.php?stream=tudn_usa'" style="text-align: left;"><button>OPC 1</button></a><span style="text-align: left;">&nbsp;</span>
+<a class="boton" href="#opcion-2" id="document" onclick="document.getElementById('streamframe').src = '//la12hd.com/vivo/canal.php?stream=tudn_usa'" style="text-align: left;"><button>OPC 2</button></a><span style="text-align: left;">&nbsp;</span>
+<a class="boton" href="#opcion-3" id="document" onclick="document.getElementById('streamframe').src = '//voodc.com/embed/1/85818a989c889a8a847a85959e8f9887857b.html'" style="text-align: left;"><button>OPC 3</button></a><span style="text-align: left;">&nbsp;</span>
 
 <div></div>
 <br>
+</div>
+  <td style="vertical-align:top;">
+    <div class="chat" style="text-align: center;">
+      <button id="openChatBtn">Abrir Chat</button>
+      <button id="closeChatBtn" style="display: none;">Cerrar Chat</button>
+      <iframe class="twitch" id="twitch-chat-embed" src="https://my.cbox.ws/onplus" width="350" height="250" loading="lazy" style="display: none;">Cargando...</iframe>
+      <div class="col-12 col-xl-4 pad-0"></div>
+      <div class="col-12 col-xl-4 chat-1 chat-container">
+    </div>
+    <script>
+
+  function cambiarFuente(nuevaFuente) {
+    document.getElementById('streamframe').src = nuevaFuente;
+  }
+      document.addEventListener('DOMContentLoaded', function () {
+        var openChatBtn = document.getElementById('openChatBtn');
+        var closeChatBtn = document.getElementById('closeChatBtn');
+        var twitchChatEmbed = document.getElementById('twitch-chat-embed');
+    
+        openChatBtn.addEventListener('click', function () {
+          openChatBtn.style.display = 'none';
+          closeChatBtn.style.display = 'inline';
+          twitchChatEmbed.style.display = 'block';
+        });
+    
+        closeChatBtn.addEventListener('click', function () {
+          openChatBtn.style.display = 'inline';
+          closeChatBtn.style.display = 'none';
+          twitchChatEmbed.style.display = 'none';
+        });
+      });
+    </script>
 
       
 </html>
